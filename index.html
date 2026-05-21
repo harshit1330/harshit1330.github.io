@@ -249,14 +249,16 @@
           linear-gradient(135deg, rgba(15, 118, 110, 0.18), rgba(245, 158, 11, 0.18)),
           var(--surface-soft);
         border-radius: 20px;
-        display: grid;
-        place-items: center;
+        margin: 0;
+        overflow: hidden;
       }
 
-      .portrait span {
-        color: var(--brand-strong);
-        font-size: clamp(4rem, 10vw, 7rem);
-        font-weight: 900;
+      .portrait img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 34%;
+        width: 100%;
       }
 
       .quick-stats {
@@ -432,6 +434,36 @@
         color: var(--muted);
       }
 
+      .contact-list {
+        display: grid;
+        gap: 0.75rem;
+        margin: 1.2rem 0 0;
+      }
+
+      .contact-item {
+        align-items: center;
+        background: var(--surface-soft);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        display: flex;
+        gap: 0.8rem;
+        justify-content: space-between;
+        padding: 0.85rem 1rem;
+      }
+
+      .contact-item span {
+        color: var(--muted);
+        font-size: 0.88rem;
+        font-weight: 800;
+      }
+
+      .contact-item a {
+        color: var(--brand-strong);
+        font-weight: 900;
+        overflow-wrap: anywhere;
+        text-align: right;
+      }
+
       footer {
         border-top: 1px solid var(--line);
         color: var(--muted);
@@ -527,6 +559,16 @@
         .quick-stats {
           grid-template-columns: 1fr;
         }
+
+        .contact-item {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 0.2rem;
+        }
+
+        .contact-item a {
+          text-align: left;
+        }
       }
     </style>
   </head>
@@ -543,6 +585,7 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -559,13 +602,18 @@
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#projects">View Projects</a>
-            <a class="button" href="#resume">Resume</a>
+            <a class="button" href="public/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
             <a class="button" href="mailto:iharshitsagar@gmail.com">Contact Me</a>
           </div>
         </div>
 
         <aside class="hero-card" aria-label="Portfolio summary" data-animate>
-          <div class="portrait" aria-hidden="true"><span>HS</span></div>
+          <figure class="portrait">
+            <img
+              src="public/profile.jpg"
+              alt="Harshit Sagar, Computer Science student and web developer"
+            />
+          </figure>
           <div class="quick-stats">
             <div class="stat">
               <strong>Java</strong>
@@ -784,11 +832,11 @@
               <p class="eyebrow">Resume</p>
               <h2>Resume and project details.</h2>
               <p class="lead">
-                The resume action uses your verified GitHub profile email. Add a
-                public resume file later if you want direct downloads from the site.
+                My resume is available as a PDF with project details, skills, and
+                current contact information.
               </p>
             </div>
-            <a class="button primary" href="mailto:iharshitsagar@gmail.com?subject=Resume%20Request%20-%20Harshit%20Sagar">Request Resume</a>
+            <a class="button primary" href="public/resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
           </div>
         </div>
       </section>
@@ -804,6 +852,16 @@
               Open to internship opportunities in web development and software
               engineering. The fastest way to reach me is by email or GitHub.
             </p>
+            <div class="contact-list" aria-label="Contact details">
+              <div class="contact-item">
+                <span>Email</span>
+                <a href="mailto:iharshitsagar@gmail.com">iharshitsagar@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <span>GitHub</span>
+                <a href="https://github.com/harshit1330" target="_blank" rel="noreferrer">github.com/harshit1330</a>
+              </div>
+            </div>
             <div class="contact-actions">
               <a class="button primary" href="mailto:iharshitsagar@gmail.com">Email Me</a>
               <a class="button" href="https://github.com/harshit1330" target="_blank" rel="noreferrer">GitHub</a>
