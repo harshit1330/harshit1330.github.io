@@ -718,7 +718,7 @@
       }
     </style>
   </head>
-  <body data-theme="light">
+  <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header>
       <nav class="shell" aria-label="Primary navigation">
@@ -1032,12 +1032,17 @@
       const themeToggle = document.querySelector(".theme-toggle");
       const themeIcon = document.querySelector(".theme-icon");
       const themeLabel = document.querySelector(".theme-label");
-      const savedTheme = localStorage.getItem("portfolio-theme");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-      function setTheme(theme) {
+      function getPreferredTheme() {
+        return localStorage.getItem("portfolio-theme") || (systemTheme.matches ? "dark" : "light");
+      }
+
+      function setTheme(theme, persist = false) {
         document.body.dataset.theme = theme;
-        localStorage.setItem("portfolio-theme", theme);
+        if (persist) {
+          localStorage.setItem("portfolio-theme", theme);
+        }
         themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
         themeToggle.setAttribute(
           "aria-label",
@@ -1047,9 +1052,14 @@
         themeLabel.textContent = theme === "dark" ? "Light" : "Dark";
       }
 
-      setTheme(savedTheme || (prefersDark ? "dark" : "light"));
+      setTheme(getPreferredTheme());
       themeToggle.addEventListener("click", () => {
-        setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+        setTheme(document.body.dataset.theme === "dark" ? "light" : "dark", true);
+      });
+      systemTheme.addEventListener("change", () => {
+        if (!localStorage.getItem("portfolio-theme")) {
+          setTheme(getPreferredTheme());
+        }
       });
     </script>
   </body>
