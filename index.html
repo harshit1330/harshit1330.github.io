@@ -515,6 +515,7 @@
       .project-card {
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         position: relative;
         padding: 1.25rem;
         transition:
@@ -527,15 +528,7 @@
         transform: translateY(-5px);
       }
 
-      .featured-project {
-        background:
-          linear-gradient(135deg, color-mix(in srgb, var(--brand) 12%, transparent), transparent 55%),
-          var(--surface-glass);
-        border-color: color-mix(in srgb, var(--brand) 34%, var(--line));
-        overflow: hidden;
-      }
-
-      .featured-project::before {
+      .project-card::before {
         background: linear-gradient(90deg, var(--brand), var(--accent));
         content: "";
         height: 5px;
@@ -543,6 +536,13 @@
         position: absolute;
         right: 0;
         top: 0;
+      }
+
+      .featured-project {
+        background:
+          linear-gradient(135deg, color-mix(in srgb, var(--brand) 12%, transparent), transparent 55%),
+          var(--surface-glass);
+        border-color: color-mix(in srgb, var(--brand) 34%, var(--line));
       }
 
       .project-card-head {
