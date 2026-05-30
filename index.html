@@ -515,6 +515,7 @@
       .project-card {
         display: flex;
         flex-direction: column;
+        position: relative;
         padding: 1.25rem;
         transition:
           transform 200ms ease,
@@ -524,6 +525,53 @@
       .project-card:hover {
         box-shadow: 0 28px 80px rgba(15, 23, 42, 0.14);
         transform: translateY(-5px);
+      }
+
+      .featured-project {
+        background:
+          linear-gradient(135deg, color-mix(in srgb, var(--brand) 12%, transparent), transparent 55%),
+          var(--surface-glass);
+        border-color: color-mix(in srgb, var(--brand) 34%, var(--line));
+        overflow: hidden;
+      }
+
+      .featured-project::before {
+        background: linear-gradient(90deg, var(--brand), var(--accent));
+        content: "";
+        height: 5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .project-card-head {
+        align-items: flex-start;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        margin-bottom: 0.8rem;
+      }
+
+      .project-card-head h3 {
+        margin-bottom: 0;
+      }
+
+      .demo-pill {
+        background: var(--ink);
+        border-color: var(--ink);
+        box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+        color: var(--surface);
+        flex: 0 0 auto;
+        min-height: 40px;
+        padding-inline: 0.9rem;
+      }
+
+      .demo-pill:hover,
+      .demo-pill:focus-visible {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
       }
 
       .project-topline {
@@ -691,6 +739,14 @@
         .contact-actions,
         .card-actions {
           flex-direction: column;
+        }
+
+        .project-card-head {
+          flex-direction: column;
+        }
+
+        .demo-pill {
+          width: 100%;
         }
 
         .button {
@@ -897,9 +953,12 @@
             </p>
           </div>
           <div class="projects-grid">
-            <article class="project-card">
+            <article class="project-card featured-project">
               <p class="project-topline">Internal Tools</p>
-              <h3>MARS OpsFlow</h3>
+              <div class="project-card-head">
+                <h3>MARS OpsFlow</h3>
+                <a class="button demo-pill" href="https://harshit1330.github.io/mars-ops-ai-dashboard/" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
               <p>
                 Internal operations dashboard concept for workflow queues, automation
                 recommendations, SOP search, weekly reporting, and AI-style drafting.
@@ -911,7 +970,6 @@
                 <span class="tag">AI Workflows</span>
               </div>
               <div class="card-actions">
-                <a class="button primary" href="https://harshit1330.github.io/mars-ops-ai-dashboard/" target="_blank" rel="noreferrer">Live Demo</a>
                 <a class="button" href="https://github.com/harshit1330/mars-ops-ai-dashboard" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </article>
