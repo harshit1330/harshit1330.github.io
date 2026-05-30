@@ -574,6 +574,11 @@
         color: #fff;
       }
 
+      .project-status {
+        align-self: flex-start;
+        margin-bottom: 0.8rem;
+      }
+
       .project-topline {
         color: var(--brand);
         font-family: var(--font-main);
@@ -676,6 +681,10 @@
       }
 
       @media (max-width: 860px) {
+        header {
+          position: static;
+        }
+
         nav {
           align-items: flex-start;
           flex-direction: column;
@@ -691,8 +700,16 @@
         }
 
         .nav-links {
+          display: grid;
           flex-wrap: wrap;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 0.75rem;
+          width: 100%;
+        }
+
+        .nav-links a {
+          display: block;
+          font-size: 0.86rem;
         }
 
         .theme-toggle {
@@ -732,7 +749,36 @@
 
       @media (max-width: 520px) {
         .shell {
-          width: min(100% - 1rem, 1120px);
+          width: min(100% - 1.25rem, 1120px);
+        }
+
+        nav {
+          min-height: 0;
+        }
+
+        .brand {
+          width: 100%;
+        }
+
+        .brand span:last-child {
+          overflow-wrap: anywhere;
+        }
+
+        .nav-links {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        h1 {
+          font-size: clamp(2.25rem, 16vw, 3.4rem);
+          line-height: 1;
+        }
+
+        h2 {
+          font-size: clamp(1.75rem, 10vw, 2.4rem);
+        }
+
+        section {
+          padding: 3.2rem 0;
         }
 
         .hero-actions,
@@ -910,28 +956,32 @@
             <article class="skill-group">
               <h3>Languages</h3>
               <div class="tags">
-                <span class="tag">Java</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
+                <span class="tag">Java</span>
                 <span class="tag">SQL</span>
               </div>
             </article>
             <article class="skill-group">
-              <h3>Tools</h3>
+              <h3>Tools & Frameworks</h3>
               <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">Vite</span>
                 <span class="tag">Git</span>
                 <span class="tag">GitHub</span>
-                <span class="tag">Linux</span>
-                <span class="tag">JDBC</span>
+                <span class="tag">GitHub Pages</span>
                 <span class="tag">VS Code</span>
               </div>
             </article>
             <article class="skill-group">
               <h3>Concepts</h3>
               <div class="tags">
-                <span class="tag">OOP</span>
-                <span class="tag">DBMS</span>
+                <span class="tag">Dashboards</span>
+                <span class="tag">Workflow Automation</span>
+                <span class="tag">API Integration</span>
+                <span class="tag">Data Workflows</span>
                 <span class="tag">Responsive Design</span>
                 <span class="tag">Accessibility</span>
               </div>
@@ -975,20 +1025,23 @@
             </article>
 
             <article class="project-card">
-              <p class="project-topline">Student Tools</p>
-              <h3>PrepBloom</h3>
-              <span class="tag">Coming soon</span>
+              <p class="project-topline">Personal Website</p>
+              <div class="project-card-head">
+                <h3>Portfolio Website</h3>
+                <a class="button demo-pill" href="https://harshit1330.github.io/" target="_blank" rel="noreferrer">Live Demo</a>
+              </div>
               <p>
-                Student productivity platform combining multiple learning tools into
-                a focused workspace for planning and progress.
+                Responsive personal portfolio with project cards, resume access,
+                contact links, dark mode, and GitHub Pages deployment.
               </p>
               <div class="tags">
-                <span class="tag">React</span>
-                <span class="tag">Planning</span>
-                <span class="tag">Students</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub Pages</span>
               </div>
               <div class="card-actions">
-                <a class="button" href="https://github.com/harshit1330" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button" href="https://github.com/harshit1330/harshit1330.github.io" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </article>
 
@@ -1009,6 +1062,24 @@
               </div>
               <div class="card-actions">
                 <a class="button" href="https://github.com/harshit1330/Learning-Management-Dashboard" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <p class="project-topline">Student Tools</p>
+              <h3>PrepBloom</h3>
+              <span class="tag project-status">Coming soon</span>
+              <p>
+                Student productivity platform combining multiple learning tools into
+                a focused workspace for planning and progress.
+              </p>
+              <div class="tags">
+                <span class="tag">React</span>
+                <span class="tag">Planning</span>
+                <span class="tag">Students</span>
+              </div>
+              <div class="card-actions">
+                <a class="button" href="https://github.com/harshit1330" target="_blank" rel="noreferrer">GitHub</a>
               </div>
             </article>
           </div>
