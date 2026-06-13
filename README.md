@@ -1,25 +1,31 @@
 # Harshit Sagar Portfolio
 
-Personal portfolio website for Harshit Sagar, a Computer Science student and Java-focused web developer. The site presents projects, skills, experience, resume access, and contact links in a responsive single-page layout.
+This is my personal portfolio website. I made it to show my projects, skills, resume, experience, and contact links in one clean responsive page.
 
 ## Live View
 
-- Live deployment: https://harshit1330.github.io/
-- Repository: https://github.com/harshit1330/harshit1330.github.io
+- Live website: https://harshit1330.github.io/
+- GitHub repo: https://github.com/harshit1330/harshit1330.github.io
 
 ## Screenshot
 
-![Portfolio website screenshot](https://image.thum.io/get/width/1200/crop/800/https://harshit1330.github.io/)
+![My portfolio website preview](https://api.microlink.io/?url=https%3A%2F%2Fharshit1330.github.io%2F&screenshot=true&meta=false&embed=screenshot.url)
+
+If the screenshot preview takes time to load, open the live website here: https://harshit1330.github.io/
+
+## What I Built
+
+I built a single-page portfolio where someone can quickly see who I am, what I work on, and how to contact me. It includes my project links, resume link, skills section, and a dark/light theme switch.
 
 ## Features
 
-- Responsive personal portfolio landing page.
+- Responsive portfolio layout for mobile and desktop.
 - About, skills, projects, experience, resume, and contact sections.
-- Dark and light theme toggle with saved preference.
-- Featured project cards with live demo and GitHub links.
+- Dark and light mode toggle.
+- Project cards with live demo and GitHub links.
 - Resume PDF link.
-- Contact actions for email, GitHub, and LinkedIn.
-- GitHub Pages deployment from the `main` branch.
+- Email, GitHub, and LinkedIn contact buttons.
+- Hosted live using GitHub Pages.
 
 ## Tech Stack
 
@@ -28,20 +34,20 @@ Personal portfolio website for Harshit Sagar, a Computer Science student and Jav
 - JavaScript
 - GitHub Pages
 
-## Install and Run Locally
+## How to Run Locally
 
-No build step is required. Clone the repository and open `index.html` in a browser.
+This project does not need any install step. Just clone the repo and open `index.html` in a browser.
 
 ```bash
 git clone https://github.com/harshit1330/harshit1330.github.io.git
 cd harshit1330.github.io
 ```
 
-Then open `index.html`, or serve the folder with any static server.
+Then open `index.html`.
 
 ## Deployment
 
-This repository is deployed as the user GitHub Pages site at:
+I deployed this portfolio with GitHub Pages.
 
 ```text
 https://harshit1330.github.io/
