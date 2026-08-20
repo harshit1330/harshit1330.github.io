@@ -34,17 +34,6 @@ I built a single-page portfolio where someone can quickly see who I am, what I w
 - JavaScript
 - GitHub Pages
 
-## How to Run Locally
-
-This project does not need any install step. Just clone the repo and open `index.html` in a browser.
-
-```bash
-git clone https://github.com/harshit1330/harshit1330.github.io.git
-cd harshit1330.github.io
-```
-
-Then open `index.html`.
-
 ## Deployment
 
 I deployed this portfolio with GitHub Pages.
