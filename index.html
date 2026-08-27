@@ -15,7 +15,7 @@
     </script>
     <meta
       name="description"
-      content="Harshit Sagar is a Computer Science student and Java-focused web developer building practical learning and productivity tools."
+      content="Harshit Sagar is a computer science student building full-stack applications, machine-learning systems, and practical developer tools."
     />
     <meta name="author" content="Harshit Sagar" />
     <meta name="theme-color" content="#0f172a" />
@@ -40,10 +40,10 @@
         --ink: #111827;
         --muted: #5b6472;
         --line: #d9e0ea;
-        --brand: #0f766e;
-        --brand-strong: #115e59;
-        --accent: #f59e0b;
-        --aura: rgba(15, 118, 110, 0.14);
+        --brand: #2563eb;
+        --brand-strong: #1d4ed8;
+        --accent: #06b6d4;
+        --aura: rgba(37, 99, 235, 0.13);
         --header-bg: rgba(255, 255, 255, 0.82);
         --shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
         --radius: 22px;
@@ -62,10 +62,10 @@
         --ink: #f8fafc;
         --muted: #cbd5e1;
         --line: #334155;
-        --brand: #5eead4;
-        --brand-strong: #99f6e4;
-        --accent: #fbbf24;
-        --aura: rgba(94, 234, 212, 0.16);
+        --brand: #60a5fa;
+        --brand-strong: #93c5fd;
+        --accent: #22d3ee;
+        --aura: rgba(37, 99, 235, 0.2);
         --header-bg: rgba(15, 23, 42, 0.84);
         --shadow: 0 28px 80px rgba(0, 0, 0, 0.36);
       }
@@ -235,6 +235,25 @@
         font-weight: 800;
         letter-spacing: 0.14em;
         text-transform: uppercase;
+      }
+
+      .availability {
+        align-items: center;
+        color: var(--muted);
+        display: inline-flex;
+        font-size: 0.9rem;
+        font-weight: 700;
+        gap: 0.55rem;
+        margin-bottom: 1rem;
+      }
+
+      .availability::before {
+        background: #22c55e;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.12);
+        content: "";
+        height: 8px;
+        width: 8px;
       }
 
       h1,
@@ -467,7 +486,7 @@
       }
 
       .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
 
       .skill-group {
@@ -519,7 +538,7 @@
       }
 
       .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .project-card {
@@ -600,6 +619,24 @@
 
       .project-card p {
         color: var(--muted);
+      }
+
+      .project-points {
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        display: grid;
+        font-size: 0.9rem;
+        gap: 0.42rem;
+        list-style: none;
+        margin: 1rem 0 0;
+        padding: 1rem 0 0;
+      }
+
+      .project-points li::before {
+        color: var(--brand);
+        content: "→";
+        font-weight: 900;
+        margin-right: 0.5rem;
       }
 
       .card-actions {
@@ -870,7 +907,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#experience">Engineering</a></li>
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -886,10 +923,12 @@
       <section class="shell hero" id="top">
         <div data-animate>
           <p class="eyebrow">Computer Science Student</p>
-          <h1>Turning ideas into useful products with code.</h1>
+          <div class="availability">Open to software engineering internships</div>
+          <h1>Curious by nature. Engineering by choice.</h1>
           <p class="lead">
-            I am Harshit Sagar, a Java-focused web developer building practical
-            tools for learning, productivity, and everyday problem solving.
+            I’m Harshit Sagar, a computer science student who enjoys understanding how
+            technology works, solving difficult problems, and continuously becoming a
+            more thoughtful and capable engineer.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#projects">View Projects</a>
@@ -907,12 +946,12 @@
           </figure>
           <div class="quick-stats">
             <div class="stat">
-              <strong>Java</strong>
-              <span>Core language</span>
+              <strong>Python</strong>
+              <span>ML & APIs</span>
             </div>
             <div class="stat">
               <strong>Web</strong>
-              <span>Frontend focus</span>
+              <span>React & JavaScript</span>
             </div>
             <div class="stat">
               <strong>CSE</strong>
@@ -927,54 +966,52 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">About</p>
-              <h2>Focused on useful products, clean code, and steady growth.</h2>
+              <h2>Learning deeply, thinking clearly, and growing consistently.</h2>
             </div>
           </div>
           <div class="about-grid">
             <div class="about-copy">
               <p class="about-intro">
-                I am growing as a developer by building projects that connect strong
-                fundamentals with practical user needs.
+                I’m a curious learner who values strong fundamentals, clear thinking,
+                and the discipline to improve through consistent practice.
               </p>
               <p>
-                I am Harshit Sagar, a Computer Science student who enjoys turning
-                ideas into simple, working software. My strongest interests are
-                Java, web development, databases, and interfaces that feel clear on
-                both desktop and mobile.
+                Computer science appeals to me because it combines logical problem-solving
+                with creativity. I’m especially interested in software engineering,
+                applied machine learning, and understanding systems beyond the surface.
               </p>
               <p>
-                I like building learning tools and productivity projects because
-                they force me to think about real workflows, not just screens. Right
-                now I am improving my software engineering fundamentals while
-                shipping complete projects and preparing for internship roles.
+                I care about being dependable, asking better questions, and writing work
+                that others can understand. My goal is to contribute meaningfully while
+                continuing to learn from experienced engineers and real-world challenges.
               </p>
               <div class="about-focus" aria-label="Current focus areas">
                 <div class="focus-item">
                   <strong>Core stack</strong>
-                  <span>Java, JavaScript, SQL</span>
+                  <span>Python, JavaScript, Java, SQL</span>
                 </div>
                 <div class="focus-item">
-                  <strong>Product area</strong>
-                  <span>Learning and productivity tools</span>
+                  <strong>Interests</strong>
+                  <span>Software engineering and applied ML</span>
                 </div>
                 <div class="focus-item">
                   <strong>Goal</strong>
-                  <span>Web development internship</span>
+                  <span>Software engineering internship</span>
                 </div>
               </div>
             </div>
             <ul class="highlight-list" aria-label="Profile highlights">
               <li>
-                <strong>Product mindset</strong>
-                <span>Learning tools, dashboards, and productivity apps built around clear user flows.</span>
+                <strong>How I learn</strong>
+                <span>Break down difficult ideas, test my understanding, and improve through iteration.</span>
               </li>
               <li>
-                <strong>Engineering base</strong>
-                <span>OOP, DBMS, JDBC, Git, GitHub, and responsive front-end implementation.</span>
+                <strong>How I work</strong>
+                <span>Stay organized, communicate clearly, and take responsibility for the quality of my work.</span>
               </li>
               <li>
-                <strong>Opportunity focus</strong>
-                <span>Open to internships where I can contribute to web development and software engineering work.</span>
+                <strong>What I value</strong>
+                <span>Curiosity, consistency, honest feedback, and engineering decisions that can be explained.</span>
               </li>
             </ul>
           </div>
@@ -986,7 +1023,7 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Skills</p>
-              <h2>Tools I use to build and learn.</h2>
+              <h2>A stack shaped by the systems I build.</h2>
             </div>
           </div>
           <div class="skills-grid">
@@ -994,33 +1031,42 @@
               <h3>Languages</h3>
               <div class="tags">
                 <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
+                <span class="tag">Python</span>
                 <span class="tag">Java</span>
                 <span class="tag">SQL</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
               </div>
             </article>
             <article class="skill-group">
-              <h3>Tools & Frameworks</h3>
+              <h3>Web Development</h3>
               <div class="tags">
                 <span class="tag">React</span>
                 <span class="tag">Tailwind CSS</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">REST APIs</span>
                 <span class="tag">Vite</span>
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-                <span class="tag">GitHub Pages</span>
-                <span class="tag">VS Code</span>
               </div>
             </article>
             <article class="skill-group">
-              <h3>Concepts</h3>
+              <h3>ML & Data</h3>
               <div class="tags">
-                <span class="tag">Dashboards</span>
-                <span class="tag">Workflow Automation</span>
-                <span class="tag">API Integration</span>
-                <span class="tag">Data Workflows</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">scikit-learn</span>
+                <span class="tag">Librosa</span>
+                <span class="tag">Model Evaluation</span>
+                <span class="tag">Grad-CAM</span>
+              </div>
+            </article>
+            <article class="skill-group">
+              <h3>Engineering & Delivery</h3>
+              <div class="tags">
                 <span class="tag">Responsive Design</span>
                 <span class="tag">Accessibility</span>
+                <span class="tag">Workflow Automation</span>
+                <span class="tag">Git</span>
+                <span class="tag">GitHub Pages</span>
+                <span class="tag">Testing</span>
               </div>
             </article>
           </div>
@@ -1032,32 +1078,59 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Projects</p>
-              <h2>Selected work and experiments.</h2>
+              <h2>Selected systems, with the engineering visible.</h2>
             </div>
             <p>
-              A mix of learning platforms, productivity workflows, and hands-on
-              software practice.
+              Projects chosen for technical depth, product thinking, and end-to-end ownership.
             </p>
           </div>
           <div class="projects-grid">
             <article class="project-card featured-project">
-              <p class="project-topline">Internal Tools</p>
+              <p class="project-topline">Applied ML · In Development</p>
+              <div class="project-card-head">
+                <h3>Svara</h3>
+                <span class="tag project-status">In Development</span>
+              </div>
+              <p>
+                Voice-pattern analysis system exploring Parkinson’s detection from WAV
+                recordings with reproducible preprocessing, baselines, and deep learning.
+              </p>
+              <ul class="project-points">
+                <li>Mel-spectrogram CNN and acoustic-feature baselines</li>
+                <li>FastAPI inference with in-memory audio validation</li>
+                <li>Cross-validation, held-out evaluation, and Grad-CAM</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Librosa</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <p class="project-topline">Operations & Automation</p>
               <div class="project-card-head">
                 <h3>MARS OpsFlow</h3>
                 <a class="button demo-pill" href="https://harshit1330.github.io/mars-ops-ai-dashboard/" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
               <p>
-                Internal operations dashboard concept for workflow queues, automation
-                recommendations, SOP search, weekly reporting, and AI-style drafting.
+                Internal operations dashboard concept for triaging workflows, surfacing
+                automation opportunities, searching SOPs, and generating team updates.
               </p>
+              <ul class="project-points">
+                <li>Queue-based operations workflow and SLA metrics</li>
+                <li>SOP search and context-aware drafting tools</li>
+                <li>Responsive, dependency-free frontend</li>
+              </ul>
               <div class="tags">
                 <span class="tag">JavaScript</span>
-                <span class="tag">Dashboards</span>
-                <span class="tag">Automation</span>
-                <span class="tag">AI Workflows</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">GitHub Pages</span>
               </div>
               <div class="card-actions">
-                <a class="button" href="https://github.com/harshit1330/mars-ops-ai-dashboard" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button" href="https://github.com/harshit1330/mars-ops-ai-dashboard" target="_blank" rel="noreferrer">Source Code</a>
               </div>
             </article>
 
@@ -1068,9 +1141,14 @@
                 <a class="button demo-pill" href="https://harshit1330.github.io/" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
               <p>
-                Responsive personal portfolio with project cards, resume access,
-                contact links, dark mode, and GitHub Pages deployment.
+                Responsive personal portfolio engineered as a dependency-free static
+                site with accessible navigation, theme persistence, and fast delivery.
               </p>
+              <ul class="project-points">
+                <li>Semantic HTML and responsive CSS architecture</li>
+                <li>Persistent light and dark themes</li>
+                <li>GitHub Pages deployment and analytics</li>
+              </ul>
               <div class="tags">
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
@@ -1078,46 +1156,33 @@
                 <span class="tag">GitHub Pages</span>
               </div>
               <div class="card-actions">
-                <a class="button" href="https://github.com/harshit1330/harshit1330.github.io" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button" href="https://github.com/harshit1330/harshit1330.github.io" target="_blank" rel="noreferrer">Source Code</a>
               </div>
             </article>
 
             <article class="project-card">
-              <p class="project-topline">Frontend Dashboard</p>
+              <p class="project-topline">Frontend Application</p>
               <div class="project-card-head">
                 <h3>Learning Management Dashboard</h3>
                 <a class="button demo-pill" href="https://harshit1330.github.io/Learning-Management-Dashboard/" target="_blank" rel="noreferrer">Live Demo</a>
               </div>
               <p>
-                Responsive React dashboard with course discovery, progress tracking,
-                quiz scoring, task management, and dark mode.
+                Responsive learning dashboard for course discovery, progress tracking,
+                quiz scoring, task management, and focused study workflows.
               </p>
+              <ul class="project-points">
+                <li>Reusable React components and client-side routing</li>
+                <li>Interactive course, quiz, and task workflows</li>
+                <li>Responsive layout with dark-mode support</li>
+              </ul>
               <div class="tags">
                 <span class="tag">React</span>
-                <span class="tag">Tailwind</span>
+                <span class="tag">Tailwind CSS</span>
                 <span class="tag">Vite</span>
+                <span class="tag">JavaScript</span>
               </div>
               <div class="card-actions">
-                <a class="button" href="https://github.com/harshit1330/Learning-Management-Dashboard" target="_blank" rel="noreferrer">GitHub</a>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <p class="project-topline">Machine Learning</p>
-              <h3>Svara</h3>
-              <span class="tag project-status">In Development</span>
-              <p>
-                Voice-pattern analysis system that uses audio spectrograms and machine
-                learning models to support Parkinson's detection research.
-              </p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">PyTorch</span>
-                <span class="tag">FastAPI</span>
-                <span class="tag">Audio ML</span>
-              </div>
-              <div class="card-actions">
-                <a class="button" href="https://github.com/harshit1330" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="button" href="https://github.com/harshit1330/Learning-Management-Dashboard" target="_blank" rel="noreferrer">Source Code</a>
               </div>
             </article>
           </div>
@@ -1128,28 +1193,28 @@
         <div class="shell">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Experience</p>
-              <h2>Current direction.</h2>
+              <p class="eyebrow">Engineering</p>
+              <h2>How I approach the work.</h2>
             </div>
           </div>
           <div class="timeline" aria-label="Experience timeline">
             <article class="timeline-item">
-              <div class="timeline-date">Now</div>
+              <div class="timeline-date">Build</div>
               <div>
-                <h3>Computer Science Student</h3>
+                <h3>Own the complete path</h3>
                 <p>
-                  Developing fundamentals in programming, databases, web development,
-                  and software design through coursework and independent projects.
+                  Start with the user or research question, define the data flow, then
+                  connect implementation, validation, interface, and deployment.
                 </p>
               </div>
             </article>
             <article class="timeline-item">
-              <div class="timeline-date">Open to roles</div>
+              <div class="timeline-date">Validate</div>
               <div>
-                <h3>Web Development and Software Engineering Internships</h3>
+                <h3>Make results inspectable</h3>
                 <p>
-                  Interested in teams where I can contribute to frontend interfaces,
-                  Java-based systems, and practical developer workflows.
+                  Use tests, evaluation metrics, explicit error handling, and clear
+                  documentation so a result can be understood—not just demonstrated.
                 </p>
               </div>
             </article>
@@ -1162,14 +1227,14 @@
           <div class="section-head">
             <div>
               <p class="eyebrow">Resume</p>
-              <h2>Resume and project details.</h2>
+              <h2>Resume.</h2>
             </div>
           </div>
           <div class="resume-panel">
             <div>
               <p class="lead">
-                My resume is available as a PDF with project details, skills, and
-                current contact information.
+                View or download my resume for a concise overview of my education,
+                skills, and experience.
               </p>
             </div>
             <a class="button primary" href="public/resume.pdf?v=202606041754" target="_blank" rel="noreferrer">Open Resume</a>
@@ -1181,12 +1246,12 @@
         <div class="shell contact-grid">
           <div>
             <p class="eyebrow">Contact</p>
-            <h2>Let's build something useful.</h2>
+              <h2>Let’s build something that works.</h2>
           </div>
           <div class="contact-panel">
             <p>
-              Open to internship opportunities in web development and software
-              engineering. The fastest way to reach me is by email or GitHub.
+              Open to software engineering and applied-ML internships. I’m especially
+              interested in teams that value ownership, experimentation, and useful products.
             </p>
             <div class="contact-list" aria-label="Contact details">
               <div class="contact-item">
@@ -1214,7 +1279,7 @@
 
     <footer>
       <div class="shell">
-        <p>&copy; 2026 Harshit Sagar. Built with HTML and CSS for GitHub Pages.</p>
+        <p>&copy; 2026 Harshit Sagar. Designed and engineered for the web.</p>
       </div>
     </footer>
     <script>
